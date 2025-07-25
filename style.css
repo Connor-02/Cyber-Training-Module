@@ -1,0 +1,235 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: url('background.jpg') center/cover no-repeat fixed;
+  color: #f5f5f5;
+}
+
+.desktop {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #f5f5f5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.start-button {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.start-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  height: 80%;
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  color: #f5f5f5;
+}
+
+.window-titlebar {
+  background: linear-gradient(90deg, #444444, #222222);
+  color: #ffffff;
+  padding: 8px 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #666666;
+}
+
+.window-content {
+  padding: 10px;
+  overflow: auto;
+  flex: 1;
+}
+
+.scoreboard {
+  background: linear-gradient(135deg, #333333, #555555);
+  border-radius: 12px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 8px 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.game-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: auto;
+}
+
+.inbox, .email-detail {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+  overflow: auto;
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inbox h3, .email-detail h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #80deea;
+  text-align: center;
+  border-bottom: 2px solid #26c6da;
+  padding-bottom: 5px;
+}
+
+ul#emailList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.email-item {
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: #e0f7fa;
+}
+.email-item:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255,255,255,0.3);
+  cursor: pointer;
+}
+
+.email-sender {
+  font-weight: bold;
+  font-size: 16px;
+  color: #4dd0e1;
+}
+
+.email-subject {
+  font-size: 14px;
+  color: #ffffff;
+  margin-top: 4px;
+}
+
+.email-preview { 
+  color: #ffffff; 
+  font-size: 13px; 
+  margin-top: 4px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+#actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#safeBtn { background: #26a69a; color: #fff; }
+#scamBtn { background: #e53935; color: #fff; }
+#safeBtn:hover { background: #2bbbad; }
+#scamBtn:hover { background: #f44336; }
+
+#feedback {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.summary {
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+button {
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover { background: #26c6da; }
+
+.difficulty-selector label {
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #f5f5f5;
+}
+.difficulty-selector input[type="radio"]:checked + label {
+  background: #26c6da;
+  color: #000;
+  border-color: #00acc1;
+}
+
+.about-section {
+  margin-top: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(0,0,0,0.6);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  text-align: center;
+  color: #f5f5f5;
+}
+
+.sender-tooltip {
+  text-decoration: underline dotted;
+  cursor: help;
+  color: #4dd0e1;
+  font-weight: bold;
+}
+.sender-tooltip:hover { color: #26c6da; }
